@@ -1,6 +1,4 @@
 package application;
-//Alt+Enter para importar a classe do pacote entities
-import entities.Triangle;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -8,39 +6,34 @@ public class Program {
     public static void main (String [] args){
         Scanner sc = new Scanner(System.in);
         Locale.setDefault(Locale.US);
-        //Problem -WITH OOP-
+        //Problem -WITHOUT OOP-
         //ler dados de dois triangulos x e y
 
-        //Criando variáveis x e y do tipo Triangle
-        Triangle x,y;
+        //três variaveis para os 3 lados dos tri x e y
 
-        //Instanciar o objeto para que ele exista
-        x= new Triangle();
-        y= new Triangle();
-
-        //ler numero inteiro para guardar no atributo a do objeto x
+        double xA, xB, xC, yA, yB, yC;
 
         System.out.println("Enter Triangle X's measures: ");
-        //leitura dos lados tri X e armazenamento e m cada um dos 3 atributos do obj x
-        x.a = sc.nextDouble();
-        x.b = sc.nextDouble();
-        x.c = sc.nextDouble();
+        //leitura dos lados tri X
+        xA = sc.nextDouble();
+        xB = sc.nextDouble();
+        xC = sc.nextDouble();
 
         System.out.println("Enter Triangle Y's measures: ");
-        //leitura dos lados tri Y e armazenamento e m cada um dos 3 atributos do obj y
-        y.a = sc.nextDouble();
-        y.b = sc.nextDouble();
-        y.c = sc.nextDouble();
+        //leitura dos lados tri Y
+        yA = sc.nextDouble();
+        yB = sc.nextDouble();
+        yC = sc.nextDouble();
 
         /* cálculo da área tri X
         com formula da area */
-        double p =(x.a + x.b + x.c) / 2.0;
-        double areaX = Math.sqrt(p * (p-x.a) * (p - x.b) * (p - x.c));
+        double p =(xA + xB + xC) / 2.0;
+        double areaX = Math.sqrt(p * (p-xA) * (p - xB) * (p - xC));
 
         /* cálculo da área tri Y
         com formula da area */
-        p =(y.a + y.b + y.c) / 2.0;
-        double areaY = Math.sqrt(p * (p-y.a) * (p - y.b) * (p - y.c));
+        p =(yA + yB + yC) / 2.0;
+        double areaY = Math.sqrt(p * (p-yA) * (p - yB) * (p - yC));
 
         System.out.println("Triangle X's area: " + areaX);
         System.out.println("Triangle Y's area: " + areaY);
